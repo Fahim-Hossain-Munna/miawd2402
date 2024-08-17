@@ -79,7 +79,7 @@ $user = mysqli_fetch_assoc($user_connect);
             <div class="app-menu">
                 <ul class="accordion-menu">
                     <li class="sidebar-title">
-                        Apps
+                        Appsi
                     </li>
                     <li>
                         <a target="_blank" href="../../index.php" class="active"><i class="material-icons-two-tone">visibility</i>Web Site</a>
