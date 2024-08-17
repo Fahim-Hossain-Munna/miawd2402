@@ -81,6 +81,9 @@ $user = mysqli_fetch_assoc($user_connect);
                     <li class="sidebar-title">
                         Apps
                     </li>
+                    <li>
+                        <a target="_blank" href="../../index.php" class="active"><i class="material-icons-two-tone">visibility</i>Web Site</a>
+                    </li>
                     <li class="<?= ($link == 'home.php') ? 'active-page':'' ?>">
                         <a href="../home/home.php" class="active"><i class="material-icons-two-tone">dashboard</i>Dashboard</a>
                     </li>
