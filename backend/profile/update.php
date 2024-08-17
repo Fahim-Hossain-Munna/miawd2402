@@ -61,8 +61,8 @@ if(isset($_POST['passubtn'])){
 
 
 if(isset($_POST['imageubtn'])){
-    $image = $_FILES['image']['name'];
-    $tmp = $_FILES['image']['tmp_name'];
+    $image = $_FILES['picture']['name'];
+    $tmp = $_FILES['picture']['tmp_name'];
     if($image){
         $id = $_SESSION['author_id'];
         $authname = $_SESSION['author_name'];

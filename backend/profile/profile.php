@@ -86,7 +86,7 @@ include '../master/header.php';
 
             <div class="card-body">
             <label for="exampleInputEmail1" class="form-label">Image Upload</label>
-            <input type="file" name="image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="file" name="picture" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
             <button type="submit" name="imageubtn" class="btn btn-primary mt-3"><i class="material-icons">add</i>Add</button>   
         </div>
