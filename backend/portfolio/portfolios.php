@@ -5,6 +5,7 @@ include "../master/header.php";
 
 $portfolios_query = "SELECT * FROM portfolios";
 $portfolios = mysqli_query($db_connect,$portfolios_query);
+$portfolio = mysqli_fetch_assoc($portfolios);
 
 
 ?>
@@ -84,6 +85,11 @@ $portfolios = mysqli_query($db_connect,$portfolios_query);
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php if(empty($portfolio)): ?>
+                                        <tr>
+                                            <td colspan="5" class="text-danger text-center">no data found!!</td>
+                                        </tr>
+                                    <?php else : ?>
                                 <?php 
                                     $num = 1;
                                     foreach($portfolios as $portfolio) : ?>
@@ -113,7 +119,7 @@ $portfolios = mysqli_query($db_connect,$portfolios_query);
                                            </div>
                                         </td>
                                     </tr>
-                                    <?php endforeach; ?>
+                                    <?php endforeach; endif; ?>
                                 </tbody>
                             </table>
                         </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 18, 2024 at 06:46 AM
+-- Generation Time: Aug 24, 2024 at 06:35 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `rajakar`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `portfolios`
+--
+
+CREATE TABLE `portfolios` (
+  `id` int NOT NULL,
+  `title` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `subtitle` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `description` longtext COLLATE utf8mb4_general_ci NOT NULL,
+  `image` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `status` varchar(200) COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'deactive'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `portfolios`
+--
+
+INSERT INTO `portfolios` (`id`, `title`, `subtitle`, `description`, `image`, `status`) VALUES
+(7, 'Proffessional Photographar', 'photo', '    Sunt aut laudantium', '-myzybu@mailinator.com-24-08-2024-3170.jpg', 'active'),
+(8, 'Wow Its greate', 'Hello', 'ami valo na .', '-Wow Its greate-24-08-2024-1840.jpg', 'active'),
+(9, 'moxapo@mailinator.com', 'newej@mailinator.com', 'Molestias veritatis ', '25-moxapo@mailinator.com-24-08-2024-3083.jpg', 'active');
 
 -- --------------------------------------------------------
 
@@ -41,8 +65,8 @@ CREATE TABLE `services` (
 
 INSERT INTO `services` (`id`, `title`, `description`, `icon`, `status`) VALUES
 (1, 'pozesofot', 'Dolorem voluptate do', 'fa fa-bandcamp', 'deactive'),
-(2, 'qupu', 'Quia harum consequat', 'fa fa-cart-arrow-down', 'active'),
-(5, 'hosoretyf', 'Sequi ut irure aute ', 'fa fa-automobile', 'deactive');
+(5, 'Car', '  Ami car wash korte gele agun lagay dei!!!', 'fa fa-car', 'active'),
+(6, 'Human', 'ami human pacar kori!', 'fa fa-male', 'active');
 
 -- --------------------------------------------------------
 
@@ -82,11 +106,22 @@ INSERT INTO `users` (`id`, `name`, `email`, `image`, `password`) VALUES
 (17, 'tonamiwyg', 'xabecyfice@mailinator.com', 'default.jpg', '$2y$10$AANxNso/4ZApAfYGDPhV8.NLWm5qj/VZ/bh4AL4Jvkm2kgV967tNS'),
 (18, 'Fahim Hossain Munna', 'bynetubu@mailinator.com', '18-Fahim Hossain Munna-18-08-2024-8053.png', 'ac748cb38ff28d1ea98458b16695739d7e90f22d'),
 (19, 'vizyq', 'perawabuk@mailinator.com', 'default.jpg', 'ac748cb38ff28d1ea98458b16695739d7e90f22d'),
-(20, 'jeredija', 'qefam@mailinator.com', 'default.jpg', 'ac748cb38ff28d1ea98458b16695739d7e90f22d');
+(20, 'jeredija', 'qefam@mailinator.com', 'default.jpg', 'ac748cb38ff28d1ea98458b16695739d7e90f22d'),
+(21, 'Kala Jahangir', 'biqibu@mailinator.com', 'default.jpg', 'ac748cb38ff28d1ea98458b16695739d7e90f22d'),
+(22, 'jysyqun', 'fizolagyv@mailinator.com', 'default.jpg', '$2y$10$DvqcXkTeyv9MHmcVHb1vUe6NLAQyvnWyR43OrKhkSinlpLgg8gT6O'),
+(23, 'qurujec', 'vanycoj@mailinator.com', 'default.jpg', '$2y$10$MiDbLCQJZ6ScH9sh9z.P.O9F8z9k8f65NjplD/7Vo8N0yGHAkbJW2'),
+(24, 'zetib', 'voget@mailinator.com', '24-zetib-21-08-24-137998353.jpg', '$2y$10$KiNzGkSLtbaD9ld09/AAI.5C.j0rvXcOlnFW1lT5/soJ0bgbuoqZq'),
+(25, 'tepyp', 'dujivox@mailinator.com', 'default.jpg', 'ac748cb38ff28d1ea98458b16695739d7e90f22d');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `portfolios`
+--
+ALTER TABLE `portfolios`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `services`
@@ -105,16 +140,22 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `portfolios`
+--
+ALTER TABLE `portfolios`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
